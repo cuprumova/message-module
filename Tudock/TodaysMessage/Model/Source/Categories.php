@@ -69,23 +69,4 @@ class Categories implements ArrayInterface
 
         return $ret;
     }
-
-    /*
-     * Get options in "key-value" format
-     * @return array
-     */
-    public function toArray()
-    {
-        $categories = $this->getStoreCategories(false, true, true);
-
-        $categoryList = [];
-        foreach ($categories as $category) {
-            $categoryList[$category->getEntityId()] = str_repeat("-", $category->getLevel()) . (__(
-                    $category->getName()
-                ));
-        }
-
-        return $categoryList;
-    }
-
 }
