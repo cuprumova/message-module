@@ -1,0 +1,12 @@
+{
+    "tudock_todaysmessage_message": {
+        "column": {
+            "entity_id": true,
+            "message": true,
+            "category_id": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

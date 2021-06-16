@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <!-- Message CRUD -->
+    <route url="/V1/messages/:id" method="GET">
+        <service class="Tudock\TodaysMessage\Api\MessageRepositoryInterface" method="getById"/>
+        <resources>
+            <resource ref="Tudock_TodaysMessage::message"/>
+        </resources>
+    </route>
+    <route url="/V1/messages/search" method="GET">
+        <service class="Tudock\TodaysMessage\Api\MessageRepositoryInterface" method="getList"/>
+        <resources>
+            <resource ref="Tudock_TodaysMessage::message"/>
+        </resources>
+    </route>
+    <route url="/V1/messages" method="POST">
+        <service class="Tudock\TodaysMessage\Api\MessageRepositoryInterface" method="save"/>
+        <resources>
+            <resource ref="Tudock_TodaysMessage::message"/>
+        </resources>
+    </route>
+    <route url="/V1/messages/:id" method="PUT">
+        <service class="Tudock\TodaysMessage\Api\MessageRepositoryInterface" method="save"/>
+        <resources>
+            <resource ref="Tudock_TodaysMessage::message"/>
+        </resources>
+    </route>
+    <route url="/V1/messages/:id" method="DELETE">
+        <service class="Tudock\TodaysMessage\Api\MessageRepositoryInterface" method="deleteById"/>
+        <resources>
+            <resource ref="Tudock_TodaysMessage::message"/>
+        </resources>
+    </route>
+</routes>

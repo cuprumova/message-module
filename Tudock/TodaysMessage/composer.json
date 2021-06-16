@@ -1,0 +1,16 @@
+{
+    "name": "tudock/todaysmessage",
+    "description": "Tudock Todays message module",
+    "require": {
+        "php": "~7.4"
+    },
+    "type": "magento2-module",
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Tudock\\TodaysMessage\\": ""
+        }
+    }
+}
